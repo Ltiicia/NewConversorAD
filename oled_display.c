@@ -174,13 +174,12 @@ void oled_draw_square(uint8_t x, uint8_t y, uint8_t width, uint8_t height)
 }
 
 /**
- * @brief Desenha uma borda (contorno) na tela inteira
+ * @brief Desenha uma borda (contorno) na tela inteira sem limpar o buffer
  *
  * @param style Estilo da borda (true para sólida, false para pontilhada)
  */
-void oled_set_border(bool style)
+void oled_draw_border(bool style)
 {
-  oled_clear();
   if (style)
   {
     // Borda sólida
@@ -209,5 +208,16 @@ void oled_set_border(bool style)
       oled_draw_pixel(127, i, 1);
     }
   }
+}
+
+/**
+ * @brief Desenha uma borda (contorno) na tela inteira
+ *
+ * @param style Estilo da borda (true para sólida, false para pontilhada)
+ */
+void oled_set_border(bool style)
+{
+  oled_clear();
+  oled_draw_border(style);
   oled_update();
 }

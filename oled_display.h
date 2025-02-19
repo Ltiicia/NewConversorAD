@@ -56,6 +56,13 @@ void oled_display_message(const char *message);
 void oled_draw_square(uint8_t x, uint8_t y, uint8_t width, uint8_t height);
 
 /**
+ * @brief Desenha uma borda (contorno) na tela inteira sem limpar o buffer
+ *
+ * @param style Estilo da borda (true para sólida, false para pontilhada)
+ */
+void oled_draw_border(bool style);
+
+/**
  * @brief Desenha uma borda (contorno) na tela inteira
  *
  * @param style Estilo da borda (true para sólida, false para pontilhada)

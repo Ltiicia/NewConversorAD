@@ -6,7 +6,7 @@
 
 #define LED_COUNT 3 // Number of RGB LEDs
 #define PWM_SLICE 0 // PWM slice for controlling LEDs
-#define PWM_MAX 50  // Maximum PWM value
+#define PWM_MAX 255 // Maximum PWM value
 
 static uint LED_PINS[LED_COUNT] = {11, 13, 12}; // GPIO pins for RGB LEDs
 static bool green_led_state = false;            // State of the green LED

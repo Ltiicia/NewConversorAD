@@ -57,6 +57,12 @@ void update_display(int x, int y)
 
   oled_clear(); // Evitar flickering chamando apenas quando necessário
   oled_draw_square(display_x, display_y, SQUARE_SIZE, SQUARE_SIZE);
+  
+  if (border_style)
+  {
+    oled_draw_border(true); // Desenha a borda sólida
+  }
+
   oled_update();
 }
 
